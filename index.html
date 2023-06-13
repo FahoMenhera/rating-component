@@ -9,35 +9,55 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-
   <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
+  <main>
+    <section class="rating-state hidden">
+      <div class="container">
+        <div class="rating-panel flex-column flow">
+          <div class="star-circle | bgc-neutral-700">
+            <img src="./images/icon-star.svg" alt="star in circle">
+          </div>
+          <h1 class="primary-heading fs-primary-heading fw-primary-heading lh-primary-heading | text-neutral-100"> How did we do? </h1>
+          <p class="fs-body fw-body lh-body | text-neutral-200">
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+          <ul class="numbers-list fs-numbers fw-numbers lh-numbers">
+            <li class="text-neutral-500 bgc-neutral-700"> 1 </li>
+            <li class="text-neutral-500 bgc-neutral-700"> 2 </li>
+            <li class="text-neutral-500 bgc-neutral-700"> 3 </li>
+            <li class="text-neutral-500 bgc-neutral-700"> 4 </li>
+            <li class="text-neutral-500 bgc-neutral-700"> 5 </li>
+          </ul>
+          <button class="fs-btn fw-btn lh-btn | btn text-neutral-100 bgc-primary">
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
+    <section class="thanks-state">
+      <div class="container">
+        <div class="thanks-panel flex-column">
+          <img src="./images/illustration-thank-you.svg" alt="thanks you illustration">
+          <h2 class="secondary-heading fs-secondary-heading fw-secondary-heading lh-secondary-heading | text-primary">
+            You selected <!-- Add rating here --> out of 5
+          </h2>
+          <h1 class="primary-heading fs-primary-heading fw-primary-heading lh-primary-heading | text-neutral-100">  Thank you! </h1>
+          <p class="fs-body fw-body lh-body | text-neutral-200">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don't hesitate to get in touch!
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Thank you state end -->
+  </main>
 
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
