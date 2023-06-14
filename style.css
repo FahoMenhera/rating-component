@@ -47,7 +47,7 @@
 
 }
 
-@media(min-width: 23.4375rem){
+@media(min-width: 23.4375em){
     :root{
       --fs-primary-heading: var(--fs-900);
       --fs-secondary-heading: var(--fs-600);
@@ -60,6 +60,17 @@
       --lh-body: var(--lh-700);
       --lh-numbers: var(--lh-700);
       --lh-btn: var(--lh-500);    
+    }
+
+    .numbers-list li{
+      min-width: 51px;
+      min-height: 51px;
+      line-height: 53px !important;
+    }
+
+    .star-circle{
+      min-width: 48px;
+      min-height: 48px !important;
     }
 }
 
@@ -143,12 +154,13 @@ body{
 
 .attribution{
   text-align: center;
+  color: var(--clr-neutral-100);
   font-size: 11px;
 }
 
 .star-circle{
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  min-height: 40px;
   border-radius: 100%;
   display: flex;
   align-items: center;
@@ -168,11 +180,11 @@ body{
 }
 
 .numbers-list li{
-  width: 51px;
-  height: 51px;
+  width: 42px;
+  height: 42px;
   border-radius: 100%;
   text-align: center;
-  line-height: 53px;
+  line-height: 44px;
   list-style: none;
   cursor: pointer;
   transition: .1s;
@@ -198,6 +210,36 @@ body{
   color: var(--clr-primary);
 }
 
+.rating-panel{
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 2rem;
+  padding: 2rem;
+  max-height: 416px;
+}
+
+.thanks-panel{
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  text-align: center;
+  max-height: 416px;
+
+}
+
+.thanks-panel img{
+  height: 108px;
+  width: 162px;
+  margin-inline: auto;
+}
+
+.secondary-heading{
+  border-radius: 30px;
+  max-width: 193px;
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
 /* Utilities classes */
 
 .hidden{
@@ -210,8 +252,14 @@ body{
   align-items: center;
 }
 
+.thanks-state{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
 :where(.flow > :not(:first-child)){
-  margin-top: 1.5rem;
+  margin-top: var(--spacing);
 }
 
 .flex-column{
@@ -225,13 +273,8 @@ body{
   --max-width: 412px;
   --padding: 1rem;
   max-width: min(var(--max-width), 100% - 2 * var(--padding));
+  max-height: 416px;
   margin-inline: auto;
-}
-
-.rating-panel{
-  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
-  border-radius: 2rem;
-  padding: 2rem;
 }
 
 .text-primary{
