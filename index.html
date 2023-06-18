@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
   
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -25,11 +26,11 @@
             to help us improve our offering!
           </p>
           <ul class="numbers-list fs-numbers fw-numbers lh-numbers">
-            <li class="text-neutral-500 bgc-neutral-700"> 1 </li>
-            <li class="text-neutral-500 bgc-neutral-700"> 2 </li>
-            <li class="text-neutral-500 bgc-neutral-700"> 3 </li>
-            <li class="text-neutral-500 bgc-neutral-700"> 4 </li>
-            <li class="text-neutral-500 bgc-neutral-700"> 5 </li>
+            <li> <button class="number-btn | text-neutral-500 bgc-neutral-700">1</button> </li>
+            <li> <button class="number-btn | text-neutral-500 bgc-neutral-700">2</button> </li>
+            <li> <button class="number-btn | text-neutral-500 bgc-neutral-700">3</button> </li>
+            <li> <button class="number-btn | text-neutral-500 bgc-neutral-700">4</button> </li>
+            <li> <button class="number-btn | text-neutral-500 bgc-neutral-700">5</button> </li>
           </ul>
           <button class="fs-btn fw-btn lh-btn | btn text-neutral-100 bgc-primary">
             Submit
@@ -40,12 +41,12 @@
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
-    <section class="thanks-state">
+    <section class="thanks-state hidden">
       <div class="container">
         <div class="thanks-panel flex-column flow" style="--spacing: 2rem;">
           <img src="./images/illustration-thank-you.svg" alt="thanks you illustration">
           <h2 class="secondary-heading fs-secondary-heading fw-secondary-heading lh-secondary-heading | text-primary bgc-neutral-700">
-            You selected <!-- Add rating here --> out of 5
+            You selected <span id="rating"></span> out of 5
           </h2>
           <h1 class="primary-heading fs-primary-heading fw-primary-heading lh-primary-heading | text-neutral-100">  Thank you! </h1>
           <p class="fs-body fw-body lh-body | text-neutral-200">
